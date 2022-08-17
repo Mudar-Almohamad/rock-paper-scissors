@@ -1,0 +1,1 @@
+{"games": [{"id": "Z7KB3ccdqC5usVhoAlg6vUUjBAWMjKUc", "players": ["abd1", "abd2"], "mode": "multi", "rounds": 2, "moves": {"round1": {"abd1": "s", "abd2": "p"}, "round2": {"abd1": "s", "abd2": "p"}}, "player1_points": 2, "player2_points": 0, "result": "abd1 wins"}]}

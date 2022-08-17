@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "eb4fc647-32a7-459c-b8ba-0f7c0208062d",
+		"name": "Rock Paper Scissors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19469615"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "nour.baker",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "nour.baker",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Current User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJub3VyLmJha2VyIiwiZXhwIjoxNjYwNDg0MTAzfQ.PU_EX-jRFYNmg6W33kceend7bd0Pn_fcu26dJWNW3X8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/me/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game",
+			"item": [
+				{
+					"name": "Read All Games",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/games",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Highest Score",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJub3VyLmJha2VyIiwiZXhwIjoxNjYwNjQyNTMyfQ.ogw3UGjWzBj_rTN3PmcQJjrA0UvRY1D6framFtktZRo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/get-highest-score",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-highest-score"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
